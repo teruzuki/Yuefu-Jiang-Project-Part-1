@@ -1,0 +1,51 @@
+html, body{
+    margin:0; padding:0; border:0;
+
+    font-size: 62.5%;
+  	font-family: "Calibri",Georgia,Serif;
+
+
+}
+
+#head{
+    width:100%;
+    background:#111;
+    position:fixed;
+}
+#head a{
+    color:#999;
+    font-size:12px;
+    font-weight:700;
+    line-height:30px;
+    padding:0 5px;
+    text-decoration:none;
+    font-family:sans-serif;
+}
+#head a:hover{
+    color:#eee;
+}
+
+
+#myName {
+    color:black;
+    font-size:12px;
+    font-weight:700;
+    line-height:30px;
+    padding:0 5px;
+    text-decoration:none;
+    font-family:sans-serif;
+}
+
+#Introduction1 {
+    color:black;
+    font-size:12px;
+    font-weight:700;
+    line-height:30px;
+    padding:0 5px;
+    text-decoration:none;
+    font-family:sans-serif;
+}
+
+
+}
+
