@@ -13,12 +13,33 @@
       width:900px;
     }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() { 
+        $("#Berberis").hide();
+        $("#Berberis").fadeIn(1500);
+        $("#Schisandra").hide();
+        $("#Schisandra").fadeIn(2000);
+        $("#Erysimum").hide();
+        $("#Erysimum").fadeIn(3000);
+        $("#Lepidium").hide();
+        $("#Lepidium").fadeIn(4000);
+        $("#paper").hide();
+        $("#paper").fadeIn(5000);
+        $("#Dayflower").hide();
+        $("#Dayflower").fadeIn(6000);
+        $("#sssection1").hide();
+        $("#sssection2").hide();
+        $("#sssection1").fadeIn("slow");
+        $("#sssection2").fadeIn("slow");
+      })
+    </script>
   </head>
   
   <body class="indexClass">
 
     <div style="z-index: 2;" id='head'>
-      <a href="#" style="margin-left:10px">Search</a>
+      <input type="text" name="search" placeholder="Search in page" id="search" style="margin-left:10px">Search</input>
       <a href="./index.html">Home</a>
       <a href="./FieldGuide.html">Field Guide</a>
       <a href="./Author.html#">About author</a>
@@ -55,9 +76,9 @@
       </div>
 
 
-    <div style="position: absolute; width: 800px; height: 100px; left: 80px; top: 340px;">
+    <div style="position: absolute; width: 800px; height: 100px; left: 80px; top: 340px;" >
       <section id="sssection1">
-        <h2>About The Project</h2>
+       <h2>About The Project</h2>
        <p class="About the Project">
         This is a long going family project to establish a field guide of herbs that people usually treated as "weed". Back to the days when people can only treat diseases with herbs, they wouldn't know that there is actual science behind it; yet a great amount of people today, being benefit from modern medicine, deny that there is science behind herbology. Such prejudice that assume all use of herbs are "witchcraft", however, could be a major obsticle in drug development. 
       </p>
@@ -74,13 +95,13 @@
       <h2>You are welcomed to upload what you find near you!</h2>
       <form action="">
         First name:<br>
-        <input type="text" name="firstname" value="Gabriel"><br>
+        <input type="text" value="Gabriel" id="firstname"><br>
         Last name:<br>
-        <input type="text" name="lastname" value="Reyes"><br><br>
+        <input type="text" id="lastname" value="Reyes"><br><br>
         Where Did you find it?<br>
-        <input type="text" name="Location" value="Gibraltar"><br><br>
+        <input type="text" id="Location" value="Gibraltar"><br><br>
         <input type="file" name="pic" accept="image/*"><br><br>
-        <input type="submit" value="Submit">
+        <input type="button" value="Submit" onclick="submissionValidation()">
         </form>
     </Section>
     </div>
@@ -98,7 +119,7 @@
       
     </footer>
 
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="./js/indexAction.js" type="text/javascript"></script>
   </body>
 </html>

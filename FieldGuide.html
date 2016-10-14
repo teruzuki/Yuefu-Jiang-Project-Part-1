@@ -17,8 +17,8 @@
   
   <body>
 
-    <div id='head'>
-      <a href="#" style="margin-left:10px">Search</a>
+    <div id='head' style="z-index: 2;">
+      <input type="text" name="search" placeholder="Search in page" id="search" style="margin-left:10px">Search</input>
       <a href="./index.html">Home</a>
       <a href="./FieldGuide.html">Field Guide</a>
       <a href="./Author.html#">About author</a>
@@ -29,21 +29,25 @@
     </header>
     
     <section id="berberis">
-      <div style="position: absolute; width: 467px; height: 100px; z-index: 1; left: 80px; top: 90px;">
+      <div style="position: absolute; width: 467px; height: 100px; left: 80px; top: 90px;">
         <h2>Berberis</h2>
         <p>Berberis is a large genus of deciduous and evergreen shrubs from 1–5 m (3.3–16.4 ft) tall found throughout the temperate and subtropical regions of the world (apart from Australia). Species diversity is greatest in South America, Africa and Asia; Europe and North America have native species as well. The most well-known Berberis species is the European barberry, Berberis vulgaris, which is common in Europe, North Africa, the Middle East, and central Asia. Many of the species have spines on the shoots and along the margins of the leaves.</p>
       </div>
       
       <div style="position: absolute; width: 467px; height: 100px; z-index: 1; left: 574px; top: 150px;">
       <figure>
-        <img src="./images/Berberis.jpg" alt="HTML5 icon" width="400" height="400">
+        <img src="./images/Berberis.jpg" alt="HTML5 icon" width="400" height="400" id="Berberis" onclick="imageEnlarge(this.src, './images/BerberisL.jpg');">
         <figcaption>A Typical Berberis, Berberis thunbergii.</figcaption>
       </figure>
       </div>
-      
+
+      <div id="enlargedPanel" onclick="this.style.display='none'">
+        <img id="largeImg" style="height:100%; margin:0; padding:0;">
+      </div>
+
       <div style="position: absolute; width: 467px; height: 100px; z-index: 1; left: 80px; top: 350px;">
       <figure>
-        <img src="./images/Berberin.png" alt="HTML5 icon" width="321" height="259">
+        <img src="./images/Berberin.png" alt="HTML5 icon" width="321" height="259" onclick="imageEnlarge(this.src, './images/Berberin.png');">
         <figcaption>Chemical Formula for Berberine, which could be extracted from Berberis. </figcaption>
       </figure>
       </div>
@@ -62,6 +66,8 @@
     </footer>
 
 
-
+    <script src="./js/indexAction.js" type="text/javascript"></script>
+    <script src="./js/jquery-3.1.1.js" type="text/javascript"></script>
+    <script src="./js/jQuerySearch.js" type="text/javascript"></script>
   </body>
 </html>
